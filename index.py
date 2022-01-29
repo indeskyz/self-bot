@@ -4,10 +4,23 @@ import asyncio
 import config
 import wait_times
 import helpers
+import logging
+import sys
 from discord.ext import commands
 from random import randint
 from time import sleep
 from random import randint
+
+
+logger = logging.getLogger()
+logger.setLevel(logging.INFO)
+formatter = logging.Formatter('%(asctime)s | %(levelname)s | %(message)s')
+
+file_handler = logging.FileHandler('logs.log')
+file_handler.setLevel(logging.DEBUG)
+file_handler.setFormatter(formatter)
+
+logger.addHandler(file_handler)
 
 bot = commands.Bot(config.preifx, self_bot=True)
 
@@ -21,6 +34,7 @@ async def on_ready():
 @bot.command()
 async def bump(ctx):
     
+    print('running command')
     async def sendMsg(msg):
         async with ctx.typing():
             await asyncio.sleep(randint(2, 9))
