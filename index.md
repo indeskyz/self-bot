@@ -22,14 +22,17 @@ These times are set within a list of dictionaries in the following form:
 
 **bump_times = [{'wait_time': 7460, 'in_use': True}, {'wait_time': 7800, 'in_use': False}]**
 
-Within the file _helpers.py_ there is 3 methods, one for selecting a time based on the **in_use** key's value, one method to reset all the times using the same **in_use** key and lastly one method to choose a random time to set to **in_use**.
+Within the file _helpers.py_ there is 3 methods: 
+- one for selecting a time based on the **in_use** key's value 
+- second method which resets all the **in_use** key's values to _False_  
+- final method to choose a new time increment.
 
-The dictonary to set to the current wait_time is based of off choosing a random int between 0 and the length of the wait_times.
+The dictionary to set to the current **wait_time** value is based off of choosing a random int between 0 and the length of the **bump_times** list.
 
 
 ### To run 
-- first install requirements.txt using _/python -m pip install -r requirements.txt_
-- Change into the folders directory and run _/python index.py_
+- first install **requirements.txt** using _python -m pip install -r requirements.txt_
+- Change into the folders directory and run _python index.py_
 
 ---
 
