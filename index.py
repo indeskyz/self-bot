@@ -45,7 +45,7 @@ logger.addHandler(file_handler)
 # client.run(config.bot_token)
 
 
-# bot = commands.Bot(config.preifx, self_bot=True)
+bot = commands.Bot(config.preifx, self_bot=True)
 
 @bot.event
 async def on_ready():
