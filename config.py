@@ -3,7 +3,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 bot_token = os.getenv('BOT_TOKEN')
-channel_id = os.getenv('PROD_SERVER_ID')
+server_id = os.getenv('SERVER_ID')
 preifx = ""
 disboard_prefix = "!d"
 bump_msg = disboard_prefix + " bump"

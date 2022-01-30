@@ -33,7 +33,7 @@ class MyClient(discord.Client):
 
     @tasks.loop(seconds=config.wait_time)
     async def my_background_task(self):
-        channel = self.get_channel(config.channel_id) 
+        channel = self.get_channel(config.server_id) 
         await channel.send(self.bump_command)
 
     @my_background_task.before_loop
