@@ -1,37 +1,39 @@
-## Welcome to GitHub Pages
+# Self Bot using discord.py-self
 
-You can use the [editor on GitHub](https://github.com/indeskyz/self-bot/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Keep your server consistently bumped without having to babysit your bump channel
+---
 
-### Markdown
+## To Provide Obfuscation The Following Bump Times Are Provided
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+**all times must be converted to seconds**
 
-```markdown
-Syntax highlighted code block
+_/youdo not need to use these times as you can just leave the default wait time of 2 hours set but there are provided for convience_
 
-# Header 1
-## Header 2
-### Header 3
+- 2 hours
+- 2 hours & 5 mins
+- 2 hours & 10 mins
+- 2 hours & 15 mins
 
-- Bulleted
-- List
 
-1. Numbered
-2. List
+These times are set within a list of dictionaries in the following form:
 
-**Bold** and _Italic_ and `Code` text
+7460 === 2 hours
 
-[Link](url) and ![Image](src)
-```
+**bump_times = [{'wait_time': 7460, 'in_use': True}, {'wait_time': 7800, 'in_use': False}]**
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+Within the file _helpers.py_ there is 3 methods, one for selecting a time based on the **in_use** key's value, one method to reset all the times using the same **in_use** key and lastly one method to choose a random time to set to **in_use**.
 
-### Jekyll Themes
+The dictonary to set to the current wait_time is based of off choosing a random int between 0 and the length of the wait_times.
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/indeskyz/self-bot/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
 
-### Support or Contact
+### To run 
+- first install requirements.txt using _/python -m pip install -r requirements.txt_
+- Change into the folders directory and run _/python index.py_
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+---
+
+
+### If you wish to not use these, a default **wait_time** variable has been set within _config.py_
+
+
