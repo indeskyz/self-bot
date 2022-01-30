@@ -27,7 +27,7 @@ logger.addHandler(file_handler)
 bot = commands.Bot(config.preifx, self_bot=True)
 
 def to_thread(func: type.Callable) -> typing.Coroutine:
-    @functools.wraps(funcs)
+    @functools.wraps(func)
     async def wrapper(*args, **kwargs):
         return await asyncio.to_thread(func, *args, **kwargs)
     return wrapper
