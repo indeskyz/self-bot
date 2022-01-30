@@ -27,12 +27,13 @@ Within the file _helpers.py_ there is 3 methods:
 - second method which resets all the **in_use** key's values to _False_  
 - final method to choose a new time increment.
 
-The dictionary to set to the current **wait_time** value is based off of choosing a random int between 0 and the length of the **bump_times** list.
+The dictionary to set to the current value for how long the bot should wait before executing the bump command is based off of choosing a random int between 0 and the length of the **bump_times** list.
 
 
 ### To run 
 - first install **requirements.txt** using _python -m pip install -r requirements.txt_
 - Change into the folders directory and run _python index.py_
+- If you have a different bump prefix other than _!d bump_ you can change these values within config.py
 
 ---
 
