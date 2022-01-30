@@ -7,3 +7,4 @@ preifx = ""
 disboard_prefix = "!d"
 bump_msg = disboard_prefix + " bump"
 stream = True
+wait_time = 7460
