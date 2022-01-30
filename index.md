@@ -8,7 +8,7 @@ Keep your server consistently bumped without having to babysit your bump channel
 
 **all times must be converted to seconds**
 
-_/youdo not need to use these times as you can just leave the default wait time of 2 hours set but there are provided for convience_
+_youdo not need to use these times as you can just leave the default wait time of 2 hours set but there are provided for convience_
 
 - 2 hours
 - 2 hours & 5 mins
