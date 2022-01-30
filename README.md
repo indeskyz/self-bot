@@ -8,9 +8,9 @@ Keep your server consistently bumped without having to babysit your bump channel
 
 **all times must be converted to seconds**
 
-_you do not need to use these times within the bump_times list as you can just leave the default value of wait_time found within **config.py** which is 2 hours. These are provided for convience_
+_you do not need to use these times within the bump_times list as you can just leave the default value of **wait_time** found within **config.py** which is 2 hours. These are provided for convience_
 
-_if you do wish to use these, be sure to set the **wait_times** variable accordingly_
+_if you do wish to use these, be sure to set the **wait_time** variable accordingly_
 
 
 - 2 hours
