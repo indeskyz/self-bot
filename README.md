@@ -34,6 +34,6 @@ The dictonary to set to the current wait_time is based of off choosing a random 
 ---
 
 
-### If you wish to not use these a default **wait_time** variable has been set within _config.py_
+### If you wish to not use these, a default **wait_time** variable has been set within _config.py_
 
 
