@@ -1,4 +1,3 @@
-import os
 import discord
 import asyncio
 import config
@@ -7,7 +6,6 @@ import helpers
 import logging
 import sys
 import functools
-import typing
 from discord.ext import commands
 from random import randint
 from time import sleep
@@ -26,12 +24,6 @@ logger.addHandler(file_handler)
 
 bot = commands.Bot(config.preifx, self_bot=True)
 
-def to_thread(func: type.Callable) -> typing.Coroutine:
-    @functools.wraps(func)
-    async def wrapper(*args, **kwargs):
-        return await asyncio.to_thread(func, *args, **kwargs)
-    return wrapper
-
 @bot.event
 async def on_ready():
     if config.stream:
@@ -47,13 +39,11 @@ async def bump(ctx):
             await asyncio.sleep(randint(2, 9))
         await ctx.send(msg)
     
-    @to_thread
-    async def wait_alloted_time():
-        while True:
-            await sendMsg(config.bump_msg)
-            sleep(config.wait_time)
+    while True:
+        await sendMsg(config.bump_msg)
+        await asyncio.sleep(config.wait_time)
 
-    await wait_alloted_time()
+
 
 bot.run(config.bot_token, bot=False)
 
